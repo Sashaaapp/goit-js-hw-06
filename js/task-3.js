@@ -1,0 +1,45 @@
+class StringBuilder {
+  constructor(initialValue) {
+    this.value = initialValue || '';
+  }
+
+  getValue() {
+    return this.value;
+  }
+
+  padEnd(str) {
+    this.value += str;
+  }
+
+  padStart(str) {
+    this.value = str + this.value;
+  }
+
+  padBoth(str) {
+    this.value = str + this.value + str;
+  }
+}
+
+// Приклад використання:
+
+const myStringBuilder = new StringBuilder('Hello');
+
+console.log(myStringBuilder.getValue()); // Виведе: Hello
+
+myStringBuilder.padEnd(' World');
+console.log(myStringBuilder.getValue()); // Виведе: Hello World
+
+myStringBuilder.padStart('Welcome ');
+console.log(myStringBuilder.getValue()); // Виведе: Welcome Hello World
+
+myStringBuilder.padBoth('!');
+console.log(myStringBuilder.getValue()); // Виведе: !Welcome Hello World!
+
+const builder = new StringBuilder(".");
+console.log(builder.getValue()); // "."
+builder.padStart("^");
+console.log(builder.getValue()); // "^."
+builder.padEnd("^");
+console.log(builder.getValue()); // "^.^"
+builder.padBoth("=");
+console.log(builder.getValue()); // "=^.^="
