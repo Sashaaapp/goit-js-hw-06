@@ -20,21 +20,6 @@ class StringBuilder {
   }
 }
 
-// Приклад використання:
-
-const myStringBuilder = new StringBuilder('Hello');
-
-console.log(myStringBuilder.getValue()); // Виведе: Hello
-
-myStringBuilder.padEnd(' World');
-console.log(myStringBuilder.getValue()); // Виведе: Hello World
-
-myStringBuilder.padStart('Welcome ');
-console.log(myStringBuilder.getValue()); // Виведе: Welcome Hello World
-
-myStringBuilder.padBoth('!');
-console.log(myStringBuilder.getValue()); // Виведе: !Welcome Hello World!
-
 const builder = new StringBuilder(".");
 console.log(builder.getValue()); // "."
 builder.padStart("^");
